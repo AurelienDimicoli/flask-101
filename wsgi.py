@@ -19,3 +19,11 @@ PRODUCTS = {
 @app.route('/api/v1/products')
 def products():
     return jsonify(PRODUCTS)
+
+
+@app.route('/api/v1/products/<int:id>')
+def getproduct(id):
+    if id in PRODUCTS:
+        return jsonify(PRODUCTS[id], 202)
+    else:
+        return "Produit non trouvé", 404
