@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello world A!"
+    return "Hello world AB!"
 
 
 PRODUCTS = {
